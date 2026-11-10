@@ -1,0 +1,39 @@
+# Stage 0 environment and reproducibility record
+interpreter: 3.12.13 (Linux-7.2.15+kali-amd64-x86_64-with-glibc2.43)
+global seed: 42
+
+## pip freeze (pinned)
+cloudpickle==3.1.2
+dill==0.4.1
+et_xmlfile==2.0.0
+iniconfig==2.3.1
+joblib==1.6.0
+narwhals==2.28.0
+numpy==2.5.4
+openpyxl==3.1.5
+packaging==26.3
+pandas==3.1.1
+pluggy==1.7.0
+psutil==7.2.2
+Pygments==2.21.0
+pytest==9.2.0
+python-dateutil==4.0.0
+PyYAML==6.0.3
+qiskit-aer==0.18.2
+qiskit==2.6.2
+rustworkx==0.18.1
+scikit-learn==1.9.1
+scipy==1.18.1
+stevedore==5.9.1
+threadpoolctl==3.8.0
+typing_extensions==4.16.0
+tzdata==2026.6
+
+## quantum backend / shots configuration (used from Stage 2 on)
+qiskit-aer available devices: ['CPU']
+training backend: exact statevector (method='statevector', shots=None)
+finite-shot checks: [1000, 8000, 100000]
+monte-carlo reference: 1000000 samples
+stage 2 penalties A/B/C: 40/12/12
+cv scheme: 5x10 stratified, seed 42
+transpiler seed: derived via utils.qiskit_seed(seed)

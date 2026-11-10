@@ -1,0 +1,63 @@
+# Single source of truth for seeds, paths and split geometry.
+# Rule: every stochastic step reads its seed from here (or a documented
+# seed_sequence derived from it). No ad-hoc seeds anywhere in src/.
+seed: 42
+
+data:
+  # NOTE: the released file on disk carries a " (1)" suffix; the prompt's
+  # `...__1_.xlsx` does not exist. Documented in README.
+  workbook: "bank_campaign_participant_release (1).xlsx"
+  sheets:
+    train: Stage1_Train
+    test: Stage1_Test
+    stage2: Stage2_Data
+    constraints: Stage2_Constraints
+  expected_rows:
+    train: 300
+    test: 100
+    stage2: 400
+
+# Stage 1: repeated stratified CV on train only.
+cv:
+  n_splits: 5
+  n_repeats: 10
+  n_jobs: 1          # n_jobs>1 would make CV fit order non-deterministic
+  shuffle_seed: 42
+
+# Stage 2 / Stage 4 problem constants (mirrored from Stage2_Constraints and
+# re-asserted in tests -- never hardcoded inside the solvers).
+stage2:
+  n_candidates: 10
+  k_select: 6
+  budget: 25
+  capacity: 22
+  penalty_a: 40      # cardinality   (sum x - K)^2
+  penalty_b: 12      # budget        (sum c x + s_b - C)^2
+  penalty_c: 12      # capacity      (sum h x + s_c - H)^2
+  brute_force_max_combinations: 210   # C(10, 6)
+
+# Stage 4: QAOA on the Stage 4 QUBO. These are solver knobs (depth, restarts,
+# iteration cap), declared before the run and never tuned on an outcome.
+stage4:
+  p_values: [1, 2, 3, 4, 5]
+  restarts: 2
+  maxiter: 200
+  shots: 8192
+  cross_check_p: [1]        # depths rebuilt in Qiskit and compared against Aer
+  robustness_resamples: 200 # bootstrap probability vectors re-solved end to end
+
+# Stage 5: 6-qubit success-probability circuit.
+stage3:
+  n_qubits: 6
+  success_threshold: 3
+  shots: [1000, 8000, 100000]
+  mc_samples: 1000000
+  bootstrap_resamples: 1000
+  noise:
+    depol_1q: 0.001
+    readout_p0_given_1: 0.02
+    readout_p1_given_0: 0.01
+
+paths:
+  results: results
+  figures: results/figures

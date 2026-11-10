@@ -1,0 +1,15 @@
+01:40:32 INFO    instance: 10 candidates, 20 qubits, 210 subsets (210 feasible), brute-force optimum 39.784885
+01:40:43 INFO    standard_soft  p=1 energy=2008.2690 P(opt)=0.0001 feas=0.217 alpha=0.5487 depth=104
+01:40:43 INFO      cross-check vs Aer p=1 ok: {'max_abs_probability_difference': 2.5701012498768883e-16, 'total_variation_distance': 9.827751576032774e-13}
+01:41:11 INFO    standard_soft  p=2 energy=1459.8974 P(opt)=0.0002 feas=0.196 alpha=0.5404 depth=169
+01:41:53 INFO    standard_soft  p=3 energy=1640.3114 P(opt)=0.0002 feas=0.199 alpha=0.5418 depth=234
+01:43:31 INFO    standard_soft  p=4 energy=2137.8979 P(opt)=0.0001 feas=0.234 alpha=0.5484 depth=299
+01:46:34 INFO    standard_soft  p=5 energy=2554.0105 P(opt)=0.0010 feas=0.200 alpha=0.5461 depth=364
+01:46:34 INFO    dicke_xy       p=1 energy= -28.9850 P(opt)=0.0044 feas=1.000 alpha=0.7285 depth=111
+01:46:34 INFO      cross-check vs Aer p=1 ok: {'max_abs_probability_difference': 4.510281037539698e-16, 'total_variation_distance': 3.0880481328375e-15}
+01:46:34 INFO    dicke_xy       p=2 energy= -30.4537 P(opt)=0.0040 feas=1.000 alpha=0.7655 depth=222
+01:46:35 INFO    dicke_xy       p=3 energy= -32.3370 P(opt)=0.0175 feas=1.000 alpha=0.8128 depth=333
+01:46:36 INFO    dicke_xy       p=4 energy= -33.0932 P(opt)=0.0759 feas=1.000 alpha=0.8318 depth=444
+01:46:37 INFO    dicke_xy       p=5 energy= -32.4881 P(opt)=0.1011 feas=1.000 alpha=0.8166 depth=555
+01:46:37 INFO    bootstrap: same optimum in 0.005 of 200 re-solves; mean candidate overlap 0.58
+01:46:37 INFO    wrote stage2_results.json + stage2_results.csv

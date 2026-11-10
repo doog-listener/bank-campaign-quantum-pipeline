@@ -1,0 +1,33 @@
+{
+  "gate": [
+    {
+      "model": "zz_kernel",
+      "baseline_mean_roc_auc": 0.6462533692722371,
+      "quantum_mean_roc_auc": 0.5130458221024259,
+      "delta_mean_roc_auc": -0.1332075471698112,
+      "folds_improved": 9,
+      "n_folds": 50,
+      "repeats_improved": 0,
+      "n_repeats": 10,
+      "requires_delta": 0.01,
+      "requires_repeats": 6.0,
+      "admitted": false,
+      "verdict": "did not help -- excluded from Stage 3"
+    },
+    {
+      "model": "vqc",
+      "baseline_mean_roc_auc": 0.6462533692722371,
+      "quantum_mean_roc_auc": 0.5690566037735849,
+      "delta_mean_roc_auc": -0.07719676549865218,
+      "folds_improved": 13,
+      "n_folds": 50,
+      "repeats_improved": 0,
+      "n_repeats": 10,
+      "requires_delta": 0.01,
+      "requires_repeats": 6.0,
+      "admitted": false,
+      "verdict": "did not help -- excluded from Stage 3"
+    }
+  ],
+  "fingerprint": "34ac751dbdd2488c6f08a3b05fc2e0b33a9c1346627732a857b06d32ed835cdc"
+}

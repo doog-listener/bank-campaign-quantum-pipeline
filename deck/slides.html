@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hybrid quantum-classical term-deposit campaign</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --ink:#e6edf3; --dim:#8b949e;
+    --accent:#58a6ff; --good:#3fb950; --warn:#d29922; --bad:#f85149;
+  }
+  @page { size: 1280px 720px; margin: 0; }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .slide{
+    width:1280px; height:720px; padding:56px 72px; position:relative;
+    page-break-after:always; break-after:page; overflow:hidden;
+    display:flex; flex-direction:column; gap:20px; justify-content:center;
+  }
+  .slide:last-child{page-break-after:auto}
+  h1{font-size:44px; line-height:1.1; margin:0; letter-spacing:-.5px}
+  h2{font-size:30px; line-height:1.15; margin:0; letter-spacing:-.3px}
+  h3{font-size:15px; margin:0 0 6px; text-transform:uppercase; letter-spacing:1.4px; color:var(--dim)}
+  p{margin:0; font-size:17px; line-height:1.5; color:var(--ink)}
+  .sub{color:var(--dim); font-size:16px}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .row{display:flex; gap:28px}
+  .col{flex:1; min-width:0}
+  .card{background:var(--panel); border:1px solid #21262d; border-radius:10px; padding:18px 20px}
+  .kpi{font-size:40px; font-weight:650; letter-spacing:-1px; line-height:1}
+  .kpi.small{font-size:28px}
+  .label{font-size:13px; color:var(--dim); text-transform:uppercase; letter-spacing:1.1px; margin-top:8px}
+  table{width:100%; border-collapse:collapse; font-size:15px}
+  th{text-align:left; color:var(--dim); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:1px; padding:6px 8px; border-bottom:1px solid #30363d}
+  td{padding:7px 8px; border-bottom:1px solid #21262d}
+  tr.hi td{background:rgba(88,166,255,.08)}
+  .good{color:var(--good)} .warn{color:var(--warn)} .bad{color:var(--bad)} .acc{color:var(--accent)}
+  ul{margin:0; padding-left:20px} li{font-size:16px; line-height:1.55; margin-bottom:7px}
+  .foot{position:absolute; left:72px; right:72px; bottom:26px; display:flex; justify-content:space-between;
+        font-size:12px; color:#484f58; letter-spacing:.8px; text-transform:uppercase}
+  .tag{display:inline-block; font-size:12px; padding:3px 9px; border-radius:999px; border:1px solid #30363d; color:var(--dim)}
+  .tag.acc{border-color:rgba(88,166,255,.5); color:var(--accent)}
+  .tag.bad{border-color:rgba(248,81,73,.5); color:var(--bad)}
+  .tag.good{border-color:rgba(63,185,80,.5); color:var(--good)}
+  .big{font-size:56px; line-height:1.05; letter-spacing:-1.5px; font-weight:650}
+  .spacer{flex:0}
+</style>
+</head>
+<body>
+
+<!-- 1 -->
+<section class="slide">
+  <div class="row" style="align-items:center; gap:40px">
+    <div class="col">
+      <h1>Which six customers,<br>and what are the odds?</h1>
+      <p class="sub" style="margin-top:14px">A pre-registered hybrid quantum–classical pipeline for the bank term-deposit campaign,<br>reported with its negative results intact.</p>
+    </div>
+    <div class="col" style="max-width:470px">
+      <div class="card">
+        <div class="kpi mono">0.567655</div>
+        <div class="label">P(≥3 of 6 subscribe)</div>
+        <div style="height:14px"></div>
+        <div class="kpi mono small">39.7849</div>
+        <div class="label">expected net value</div>
+        <div style="height:14px"></div>
+        <div class="mono" style="font-size:15px; color:var(--accent)">C0081 C0031 C0079 C0170 C0327 C0182</div>
+        <div class="label">selected · cost 12/25 · capacity 13/22</div>
+      </div>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div class="row">
+    <div class="col"><span class="tag acc">144 tests</span> <span class="tag">seed 42</span> <span class="tag">5 stages</span> <span class="tag bad">0 quantum wins claimed</span></div>
+    <div class="col" style="text-align:right; color:#484f58; font-size:13px">Stages 0–6 · reproducible end to end</div>
+  </div>
+  <div class="foot"><span>Hybrid quantum–classical campaign</span><span>1 / 10</span></div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>Five stages, one frozen protocol</h2>
+  <p class="sub">Every learned statistic is fitted inside a fold. The selection rule was hashed before any model was trained.</p>
+  <div class="row" style="margin-top:6px">
+    <div class="col card"><h3>Stage 0–1</h3><p><b>Classical baseline.</b> 5×10 repeated stratified CV, 3 registered candidates, nested sigmoid calibration.</p><p class="sub mono" style="margin-top:8px">ROC-AUC 0.6463</p></div>
+    <div class="col card"><h3>Stage 2</h3><p><b>Quantum classifiers.</b> ZZ fidelity kernel, data-reuploading VQC, plus the ablations that make the comparison fair.</p><p class="sub mono" style="margin-top:8px">gate: rejected</p></div>
+    <div class="col card"><h3>Stage 3–4</h3><p><b>Selection.</b> One probability vector, top 10, 20-qubit QUBO, brute force, standard + Dicke/XY QAOA.</p><p class="sub mono" style="margin-top:8px">optimum 39.7849</p></div>
+    <div class="col card"><h3>Stage 5–6</h3><p><b>Outcome.</b> 6-qubit circuit, exact Poisson-binomial, shot/noise/mitigation runs, traceability bundle.</p><p class="sub mono" style="margin-top:8px">P(≥3) 0.567655</p></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="card" style="border-color:#30363d">
+    <p><b>The protocol is the deliverable.</b> Test rows are never used for features, tuning, calibration, thresholds or model selection; the admission rule and its fingerprint were written into <span class="mono">PREREGISTRATION.md</span> before Stage 1 ran, and Stage 3 refuses to continue if the artifact it reads was produced under a different fingerprint.</p>
+  </div>
+  <div class="foot"><span>Protocol</span><span>2 / 10</span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>Stage 1 — the classical bar to beat</h2>
+  <div class="row">
+    <div class="col">
+      <table>
+        <tr><th>candidate</th><th>ROC-AUC</th><th>PR-AUC</th><th>Brier</th></tr>
+        <tr class="hi"><td>GB tuned · n=100, d=2, η=0.03</td><td class="acc mono">0.6463 ± 0.0781</td><td class="mono">0.2984</td><td class="mono">0.0997</td></tr>
+        <tr><td>random forest</td><td class="mono">0.6301</td><td class="mono">0.2761</td><td class="mono">0.1050</td></tr>
+        <tr><td>gradient boosting (base)</td><td class="mono">0.6210</td><td class="mono">0.2687</td><td class="mono">0.1038</td></tr>
+        <tr><td>logistic regression L2</td><td class="mono">0.5761</td><td class="mono">0.2384</td><td class="mono">0.1085</td></tr>
+      </table>
+      <p class="sub" style="margin-top:12px">50 folds · 60-row validation slices · 35 positives in 300 rows.</p>
+    </div>
+    <div class="col" style="max-width:420px">
+      <div class="card">
+        <h3>Calibration decision</h3>
+        <p>Nested sigmoid calibration made Brier <b>worse</b>: 0.0997 → 0.1010.</p>
+        <p class="sub" style="margin-top:8px">The pre-registered fallback applies, so Stage 3 ships <b>raw</b> probabilities. The bit is recorded before any test row is scored.</p>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <h3>Why this number matters</h3>
+        <p>0.6463 is the bar every quantum model is measured against — and the reason the pipeline reports a rejection instead of a story.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Stage 1 · classical</span><span>3 / 10</span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>Stage 2 — the quantum models lost, and here is where</h2>
+  <div class="row">
+    <div class="col">
+      <table>
+        <tr><th>model (4-D in-fold PCA)</th><th>ROC-AUC</th><th>Δ vs GB</th><th>folds won</th></tr>
+        <tr><td>GB on the same 4-D features</td><td class="mono">0.5431</td><td class="mono">−0.103</td><td class="mono">—</td></tr>
+        <tr><td>VQC · 16 params · COBYLA</td><td class="mono hi">0.5691</td><td class="mono bad">−0.0772</td><td class="mono">13 / 50</td></tr>
+        <tr><td>ZZ fidelity kernel + SVC</td><td class="mono">0.5130</td><td class="mono bad">−0.1332</td><td class="mono">9 / 50</td></tr>
+        <tr><td>unentangled kernel (ablation)</td><td class="mono">0.4794</td><td class="mono">−0.167</td><td class="mono">6 / 50</td></tr>
+        <tr><td>classical RBF SVM, same features</td><td class="mono">0.4542</td><td class="mono">−0.192</td><td class="mono">4 / 50</td></tr>
+      </table>
+    </div>
+    <div class="col" style="max-width:430px">
+      <div class="card">
+        <h3>The decisive ablation</h3>
+        <p>GB drops <b>0.6463 → 0.5431</b> when restricted to the same 4-D projection.</p>
+        <div class="big mono acc" style="margin-top:10px">78 %</div>
+        <p class="sub">of the ZZ kernel's 0.133 gap is feature compression, not the quantum map.</p>
+      </div>
+      <p class="sub" style="margin-top:14px">Entanglement is worth +0.0336 (28/50 folds) — suggestive, not significant. Both quantum models fail the gate with 0/10 repeats won, so no quantum score enters Stage 3.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Stage 2 · quantum classifiers</span><span>4 / 10</span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>Stage 3 — one vector, and a tie that decided slot 10</h2>
+  <div class="row">
+    <div class="col">
+      <table>
+        <tr><th>#</th><th>id</th><th>p-hat</th><th>bootstrap</th><th>top-10</th></tr>
+        <tr class="hi"><td>1</td><td class="mono">C0081</td><td class="mono">0.718054</td><td class="mono">0.498 ± 0.242</td><td class="mono">84 %</td></tr>
+        <tr class="hi"><td>2</td><td class="mono">C0031</td><td class="mono">0.703851</td><td class="mono">0.477 ± 0.251</td><td class="mono">81 %</td></tr>
+        <tr class="hi"><td>3</td><td class="mono">C0079</td><td class="mono">0.654671</td><td class="mono">0.501 ± 0.256</td><td class="mono">81 %</td></tr>
+        <tr><td>4</td><td class="mono">C0170</td><td class="mono">0.208464</td><td class="mono">0.187 ± 0.092</td><td class="mono">36 %</td></tr>
+        <tr><td>5</td><td class="mono">C0327</td><td class="mono">0.203974</td><td class="mono">0.215 ± 0.112</td><td class="mono">48 %</td></tr>
+        <tr><td>6</td><td class="mono">C0183</td><td class="mono">0.200777</td><td class="mono">0.235 ± 0.116</td><td class="mono">57 %</td></tr>
+        <tr><td>7</td><td class="mono">C0182</td><td class="mono">0.186305</td><td class="mono">0.153 ± 0.083</td><td class="mono">20 %</td></tr>
+        <tr><td>8</td><td class="mono">C0193</td><td class="mono">0.178435</td><td class="mono">0.145 ± 0.093</td><td class="mono">14 %</td></tr>
+        <tr><td>9</td><td class="mono">C0349</td><td class="mono warn">0.169156</td><td class="mono">0.180 ± 0.111</td><td class="mono">29 %</td></tr>
+        <tr><td>10</td><td class="mono">C0359</td><td class="mono warn">0.169156</td><td class="mono">0.170 ± 0.101</td><td class="mono">27 %</td></tr>
+      </table>
+    </div>
+    <div class="col" style="max-width:430px">
+      <div class="card">
+        <h3>Tie-break is load-bearing</h3>
+        <p>C0349 and C0359 receive an <b>identical</b> score to double precision. The pre-registered rule (ascending <span class="mono">customer_id</span>) decides slot 9, not the model.</p>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <h3>The point estimate is not the answer</h3>
+        <p>0.718 → 0.498 under bootstrap. With 35 positives the model knows <i>who leads</i>, not <i>how likely</i>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Stage 3 · probability vector</span><span>5 / 10</span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>Stage 4 — an exact answer, and constraints that never bite</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <h3>QUBO</h3>
+        <p class="mono" style="font-size:14px; line-height:1.7">min −Σ wᵢxᵢ + 40(Σx−6)² + 12(Σc·x+s_b−25)² + 12(Σh·x+s_c−22)²</p>
+        <p class="sub" style="margin-top:10px">20 qubits · 10 decision + two 5-bit slack registers · 165 couplings</p>
+      </div>
+      <table style="margin-top:16px">
+        <tr><th>quantity</th><th>bound</th><th>worst case over all 210 subsets</th></tr>
+        <tr><td>cardinality</td><td class="mono">= 6</td><td class="mono">6</td></tr>
+        <tr><td>cost</td><td class="mono">≤ 25</td><td class="mono good">15</td></tr>
+        <tr><td>capacity</td><td class="mono">≤ 22</td><td class="mono good">18</td></tr>
+      </table>
+    </div>
+    <div class="col" style="max-width:470px">
+      <div class="card" style="border-color:rgba(210,153,34,.45)">
+        <h3 style="color:var(--warn)">Findings</h3>
+        <ul>
+          <li>All <b>210</b> subsets are feasible, so the QUBO's feasible set is the whole weight-6 shell and the optimum is simply the <b>six largest wᵢ</b>.</li>
+          <li>The budget and capacity rows <b>cannot</b> change the answer for this instance.</li>
+          <li>QUBO ground state (−39.7849) <b>equals</b> the brute-force optimum; the run aborts if it does not.</li>
+        </ul>
+      </div>
+      <p class="sub" style="margin-top:14px">Stated plainly: on this instance no optimiser — quantum or classical — can beat sorting six numbers. The pipeline says so instead of dressing it up.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Stage 4 · QUBO</span><span>6 / 10</span></div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>Stage 4 — QAOA: encoding beats penalty strength</h2>
+  <div class="row">
+    <div class="col">
+      <table>
+        <tr><th>solver</th><th>p</th><th>qubits</th><th>feasibility</th><th>P(opt)</th><th>α</th></tr>
+        <tr><td>standard soft penalty</td><td class="mono">1</td><td class="mono">20</td><td class="mono bad">21.7 %</td><td class="mono">1.4e-4</td><td class="mono">0.549</td></tr>
+        <tr><td>standard soft penalty</td><td class="mono">3</td><td class="mono">20</td><td class="mono bad">19.9 %</td><td class="mono">2.2e-4</td><td class="mono">0.542</td></tr>
+        <tr><td>standard soft penalty</td><td class="mono">5</td><td class="mono">20</td><td class="mono bad">20.0 %</td><td class="mono">9.8e-4</td><td class="mono">0.546</td></tr>
+        <tr><td>Dicke + XY ring</td><td class="mono">1</td><td class="mono">10</td><td class="mono good">100 %</td><td class="mono">0.0044</td><td class="mono">0.729</td></tr>
+        <tr><td>Dicke + XY ring</td><td class="mono">3</td><td class="mono">10</td><td class="mono good">100 %</td><td class="mono">0.0175</td><td class="mono">0.813</td></tr>
+        <tr class="hi"><td>Dicke + XY ring</td><td class="mono">4</td><td class="mono">10</td><td class="mono good">100 %</td><td class="mono">0.0759</td><td class="mono acc">0.832</td></tr>
+        <tr class="hi"><td>Dicke + XY ring</td><td class="mono">5</td><td class="mono">10</td><td class="mono good">100 %</td><td class="mono acc">0.101</td><td class="mono">0.817</td></tr>
+      </table>
+      <p class="sub" style="margin-top:10px">α = E[net value] / optimal net value over the exact output distribution.</p>
+    </div>
+    <div class="col" style="max-width:400px">
+      <div class="card">
+        <h3>What the numbers say</h3>
+        <ul>
+          <li>Soft penalties spend amplitude on low-cardinality states; more depth does not fix it (energy 2008 → 2554 vs ground −39.8).</li>
+          <li>Dicke/XY holds Σx=6 exactly, and by p=4 its single most probable bitstring <b>is</b> the optimum: 838/8 192 shots at p=5.</li>
+        </ul>
+      </div>
+      <p class="sub" style="margin-top:14px">Simulators verified against Qiskit/Aer on the full problems: max |ΔP| = 2.6e-16 (standard), 4.5e-16 (Dicke).</p>
+    </div>
+  </div>
+  <div class="foot"><span>Stage 4 · QAOA</span><span>7 / 10</span></div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>Stage 5 — six qubits, and every row is a real simulation</h2>
+  <div class="row">
+    <div class="col">
+      <table>
+        <tr><th>method</th><th>shots</th><th>P-hat(≥3)</th><th>error</th></tr>
+        <tr class="hi"><td>exact Poisson-binomial</td><td class="mono">∞</td><td class="mono acc">0.567655</td><td class="mono">0</td></tr>
+        <tr><td>ideal statevector</td><td class="mono">∞</td><td class="mono">0.567655</td><td class="mono">2e-16</td></tr>
+        <tr><td>Aer sampling</td><td class="mono">8 000</td><td class="mono">0.580875</td><td class="mono">1.3e-2</td></tr>
+        <tr><td>Aer sampling</td><td class="mono">100 000</td><td class="mono">0.567060</td><td class="mono">5.9e-4</td></tr>
+        <tr><td>noisy Aer · 20 seeds</td><td class="mono">8 000</td><td class="mono warn">0.5570 ± 0.0049</td><td class="mono">−0.0106</td></tr>
+        <tr><td>readout-mitigated · 20 seeds</td><td class="mono">8 000</td><td class="mono good">0.5664 ± 0.0059</td><td class="mono">−0.0012</td></tr>
+      </table>
+      <p class="sub" style="margin-top:10px">The 8 000-shot draw really is 2.4σ high. It is reported as measured, not re-seeded until it looks tidy.</p>
+    </div>
+    <div class="col" style="max-width:420px">
+      <div class="card">
+        <h3>Circuit</h3>
+        <p>6 qubits · 6 <span class="mono">Ry(2 arcsin √p)</span> · <b>0 two-qubit gates</b> · 0 SWAPs</p>
+        <p class="sub" style="margin-top:8px">logical depth 1 → depth 4 / 24 one-qubit gates in <span class="mono">{rz,sx,x,cx}</span></p>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <h3>Mitigation is measured, not asserted</h3>
+        <p>A 64×64 assignment matrix built from simulated calibration circuits + NNLS removes <b>89 %</b> of the readout bias.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Stage 5 · outcome circuit</span><span>8 / 10</span></div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <h2>Where the uncertainty actually lives</h2>
+  <div class="row">
+    <div class="col">
+      <table>
+        <tr><th>source</th><th>mean</th><th>sd</th><th>95 % interval</th></tr>
+        <tr><td>shot noise @ 8 192</td><td class="mono">—</td><td class="mono good">0.0055</td><td class="mono">—</td></tr>
+        <tr><td>frozen selection (1000 draws)</td><td class="mono">0.3486</td><td class="mono bad">0.2180</td><td class="mono">[0.027, 0.748]</td></tr>
+        <tr><td>re-solved selection (1000 draws)</td><td class="mono">0.5046</td><td class="mono bad">0.2025</td><td class="mono">[0.147, 0.853]</td></tr>
+      </table>
+      <p class="sub" style="margin-top:12px">Model uncertainty is <b class="bad">~40×</b> quantum shot noise. The frozen-selection mean sits below the point estimate because refitting shrinks extreme probabilities.</p>
+    </div>
+    <div class="col" style="max-width:460px">
+      <div class="card">
+        <h3>Selection stability</h3>
+        <p>Under bootstrap, the top-10 candidate set is identical in <b>2.5 %</b> of re-solves, and the six-customer optimum repeats in <b>0.5 %</b>.</p>
+        <p class="sub" style="margin-top:8px">Mean regret of the frozen pick: 10.1 of 39.78 (p95 32.8).</p>
+      </div>
+      <p class="sub" style="margin-top:14px">This is the project's main negative result: the decision is dominated by 300 rows of training variance, not by any quantum effect.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Error propagation</span><span>9 / 10</span></div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <h2>What we claim, and what we do not</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card" style="border-color:rgba(63,185,80,.45)">
+        <h3 style="color:var(--good)">Claimed</h3>
+        <ul>
+          <li>A reproducible pipeline: 144 tests, seeded, one-command reproduce.</li>
+          <li>An exact, verified answer: 6 customers, 39.7849 net value, 0.567655 success probability.</li>
+          <li>Quantified decomposition of classical vs quantum contributions — including where quantum lost.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="border-color:rgba(248,81,73,.45)">
+        <h3 style="color:var(--bad)">Not claimed</h3>
+        <ul>
+          <li>No quantum advantage. The Stage 4 instance is solved exactly by 210-way enumeration and by sorting.</li>
+          <li>No hardware results: simulators only (qiskit-aer 0.18.2).</li>
+          <li>No test-set accuracy: the release contains no test labels.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:4px">
+    <h3>Deliverable</h3>
+    <p class="mono" style="font-size:15px">submission.zip · results/traceability.md · deck/slides.pdf · reproduce.sh · 144 tests passing</p>
+  </div>
+  <div class="spacer"></div>
+  <div class="foot"><span>Hybrid quantum–classical campaign</span><span>10 / 10</span></div>
+</section>
+
+</body>
+</html>

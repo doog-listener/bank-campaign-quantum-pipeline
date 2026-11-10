@@ -1,0 +1,250 @@
+{
+  "workbook": {
+    "file": "bank_campaign_participant_release (1).xlsx",
+    "sha256": "d2f8e63705af2883c7618c463a6ac2f351119d59a8869d2677f8825148e9a709"
+  },
+  "shapes": {
+    "train": [
+      300,
+      17
+    ],
+    "test": [
+      100,
+      16
+    ],
+    "stage2": [
+      400,
+      5
+    ],
+    "constraints": [
+      6,
+      4
+    ]
+  },
+  "columns": {
+    "train": [
+      "customer_id",
+      "age",
+      "job",
+      "marital",
+      "education",
+      "default",
+      "balance",
+      "housing",
+      "loan",
+      "contact",
+      "day",
+      "month",
+      "campaign",
+      "pdays",
+      "previous",
+      "poutcome",
+      "y"
+    ],
+    "test": [
+      "customer_id",
+      "age",
+      "job",
+      "marital",
+      "education",
+      "default",
+      "balance",
+      "housing",
+      "loan",
+      "contact",
+      "day",
+      "month",
+      "campaign",
+      "pdays",
+      "previous",
+      "poutcome"
+    ],
+    "stage2": [
+      "customer_id",
+      "contact_cost",
+      "expected_deposit_value",
+      "capacity_units",
+      "customer_segment"
+    ]
+  },
+  "key_integrity": {
+    "status": "ok (asserted)",
+    "train_ids_unique": true,
+    "test_ids_unique": true,
+    "test_id_count": 100,
+    "train_test_disjoint": true,
+    "test_ids_in_stage2": 100,
+    "stage2_join": "1:1 (train U test == Stage2 ids)"
+  },
+  "duplicates": {
+    "duplicate_rows_train": 0,
+    "duplicate_rows_test": 0,
+    "duplicate_rows_stage2": 0,
+    "duplicate_ids": 0
+  },
+  "missing_values": {
+    "train": 0,
+    "test": 0,
+    "stage2": 0
+  },
+  "class_balance": {
+    "positives": 35,
+    "negatives": 265,
+    "positive_rate": 0.116667,
+    "positive_rate_pct": 11.67
+  },
+  "numeric_summary": {
+    "train": {
+      "age": {
+        "min": 22.0,
+        "max": 80.0,
+        "mean": 40.7867,
+        "n_unique": 47
+      },
+      "balance": {
+        "min": -2082.0,
+        "max": 27069.0,
+        "mean": 1695.9533,
+        "n_unique": 266
+      },
+      "day": {
+        "min": 1.0,
+        "max": 31.0,
+        "mean": 16.7133,
+        "n_unique": 31
+      },
+      "campaign": {
+        "min": 1.0,
+        "max": 50.0,
+        "mean": 2.92,
+        "n_unique": 16
+      },
+      "pdays": {
+        "min": -1.0,
+        "max": 385.0,
+        "mean": 31.6967,
+        "n_unique": 43
+      },
+      "previous": {
+        "min": 0.0,
+        "max": 8.0,
+        "mean": 0.4367,
+        "n_unique": 9
+      }
+    },
+    "test": {
+      "age": {
+        "min": 21.0,
+        "max": 64.0,
+        "mean": 42.35,
+        "n_unique": 36
+      },
+      "balance": {
+        "min": -650.0,
+        "max": 17361.0,
+        "mean": 1205.61,
+        "n_unique": 92
+      },
+      "day": {
+        "min": 2.0,
+        "max": 31.0,
+        "mean": 15.54,
+        "n_unique": 26
+      },
+      "campaign": {
+        "min": 1.0,
+        "max": 12.0,
+        "mean": 2.16,
+        "n_unique": 9
+      },
+      "pdays": {
+        "min": -1.0,
+        "max": 386.0,
+        "mean": 57.44,
+        "n_unique": 25
+      },
+      "previous": {
+        "min": 0.0,
+        "max": 22.0,
+        "mean": 0.67,
+        "n_unique": 6
+      }
+    },
+    "stage2": {
+      "contact_cost": {
+        "min": 1.0,
+        "max": 4.0,
+        "mean": 2.4825,
+        "n_unique": 4
+      },
+      "expected_deposit_value": {
+        "min": 12.0,
+        "max": 30.0,
+        "mean": 21.345,
+        "n_unique": 19
+      },
+      "capacity_units": {
+        "min": 1.0,
+        "max": 4.0,
+        "mean": 2.505,
+        "n_unique": 4
+      }
+    }
+  },
+  "categorical_cardinality": {},
+  "range_violations": {
+    "train": [],
+    "test": [],
+    "stage2": []
+  },
+  "derived_features": {
+    "prev_contacted_rule": "prev_contacted = (pdays != -1)",
+    "never_contacted_frac_train": 0.8467,
+    "pdays_values_when_not_contacted": [
+      -1
+    ]
+  },
+  "stage2_feasibility": {
+    "max_contact_cost": 4,
+    "max_capacity_units": 4,
+    "k": 6,
+    "budget": 25,
+    "capacity": 22,
+    "worst_case_cost_k_selected": 24,
+    "budget_binds": false,
+    "capacity_binds": true,
+    "note": "budget is slack by construction; only capacity can be tight"
+  },
+  "leakage": {
+    "duration_absent_everywhere": {
+      "train": true,
+      "test": true,
+      "stage2": true
+    },
+    "target_only_in_train": {
+      "train_has_y": true,
+      "test_has_y": false,
+      "stage2_has_y": false
+    },
+    "identical_feature_rows_train_test": {
+      "count": 0,
+      "columns_compared": 15
+    },
+    "constant_columns": {
+      "train": [],
+      "test": [],
+      "stage2": []
+    },
+    "test_levels_unseen_in_train": {}
+  },
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1",
+    "qiskit": "2.6.2",
+    "qiskit_aer": "0.18.2",
+    "openpyxl": "3.1.5"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "version": "1.0",
+  "frozen_at_stage": 0,
+  "fingerprint": "34ac751dbdd2488c6f08a3b05fc2e0b33a9c1346627732a857b06d32ed835cdc",
+  "rule": {
+    "version": "1.0",
+    "frozen_at_stage": 0,
+    "candidate_models": [
+      "logistic_regression_l2",
+      "random_forest",
+      "gradient_boosting"
+    ],
+    "complexity_order": [
+      "logistic_regression_l2",
+      "gradient_boosting",
+      "random_forest"
+    ],
+    "cv": {
+      "scheme": "repeated_stratified_kfold",
+      "n_splits": 5,
+      "n_repeats": 10,
+      "seed": 42
+    },
+    "primary_metric": "mean_roc_auc_over_folds",
+    "criteria_in_order": [
+      {
+        "rank": 1,
+        "criterion": "maximise mean CV ROC-AUC across the 50 folds"
+      },
+      {
+        "rank": 2,
+        "criterion": "tie within 1e-6 -> maximise mean CV PR-AUC"
+      },
+      {
+        "rank": 3,
+        "criterion": "tie within 1e-6 -> minimise mean CV Brier (calibrated)"
+      },
+      {
+        "rank": 4,
+        "criterion": "tie within 1e-6 -> earlier in complexity_order (simpler wins)"
+      },
+      {
+        "rank": 5,
+        "criterion": "still tied -> earlier in candidate_models (deterministic)"
+      }
+    ],
+    "calibration": {
+      "method": "sigmoid (Platt)",
+      "where": "fitted on out-of-fold predictions of training rows only (nested CV)",
+      "shipped_probability_rule": "ship calibrated probability if CV Brier(calibrated) <= CV Brier(raw), else ship raw; decided once on train CV and logged"
+    },
+    "quantum_admission": {
+      "allowed_form": "stacked/blended score with the selected classical model only",
+      "admitted_if": [
+        "delta mean CV ROC-AUC >= +0.01 vs the selected classical baseline",
+        "strict improvement in at least 60% of the 10 CV repeats (paired per repeat)",
+        "computed on identical folds and identical in-fold PCA features"
+      ],
+      "otherwise": "reject the quantum score and report 'did not help' with the measured delta"
+    },
+    "final_fit": {
+      "fit_on": "all 300 Stage1_Train rows",
+      "hyperparameters": "those selected by CV above; no re-tuning after seeing test",
+      "test_usage": "predict exactly once, at Stage 3"
+    },
+    "ranking": {
+      "order": "predicted_probability descending",
+      "tie_break": "customer_id ascending (alphanumeric)",
+      "top10_flag": "first 10 rows of the ranked test set; never edited afterwards"
+    },
+    "seeds": {
+      "global": 42,
+      "note": "all stochastic components derive from this seed"
+    }
+  }
+}

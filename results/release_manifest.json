@@ -1,0 +1,271 @@
+{
+  "bundle": "submission.zip",
+  "root": "bank-campaign-quantum-pipeline",
+  "files": 50,
+  "bytes": 1422209,
+  "sha256": "357df3eac96737575e5a7841f1a4078534cd1ef5ddeaca75d6046f6af6c21477",
+  "manifest": [
+    {
+      "path": "PREREGISTRATION.md",
+      "bytes": 1725,
+      "sha256": "5c095389d0bf8bfbdad7033f3b2a3034bbfd1fd344f31042b554330f228bb85d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 29269,
+      "sha256": "b9844aa3b019ff13f0872fc712a664a9cd8cf26fc3811cc7664095f49b0538c7"
+    },
+    {
+      "path": "bank_campaign_participant_release (1).xlsx",
+      "bytes": 50217,
+      "sha256": "d2f8e63705af2883c7618c463a6ac2f351119d59a8869d2677f8825148e9a709"
+    },
+    {
+      "path": "bank_campaign_participant_release.xlsx",
+      "bytes": 59082,
+      "sha256": "ff65cb30ceb8a32d682644cd8b161234c80f1315736d909c03afccd5553ef823"
+    },
+    {
+      "path": "configs/config.yaml",
+      "bytes": 1895,
+      "sha256": "73aae793bd5dcbc6992bd369906e5ab962e8907ae5fe835ee21e79c007db15a2"
+    },
+    {
+      "path": "deck/slides.html",
+      "bytes": 20927,
+      "sha256": "520b41b76e9a2d859faf5efb962487fedaa12b5f77cd9e43dadf65c97a26a15e"
+    },
+    {
+      "path": "deck/slides.pdf",
+      "bytes": 242258,
+      "sha256": "fbbf4cf85369cba675dbc3b5ad3864dcb0f49c98137931045de63dadd81ac0db"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 99,
+      "sha256": "7568a73edc67f8821b82a2cd9a947dc2167bd8270613f3d71f670a56b47d72a0"
+    },
+    {
+      "path": "reproduce.sh",
+      "bytes": 2467,
+      "sha256": "3bc6597698436c75a3a0498d6a2c6f3135920ed0dd45c5f43ee3d4913bc0127d"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 416,
+      "sha256": "c3f397d2886b69bce0ae9bdf60da188e3e53bf3bf4d8bd159bfa7f55841a3688"
+    },
+    {
+      "path": "results/stage0_audit.json",
+      "bytes": 4836,
+      "sha256": "b153825b28ab33e024d9a6f671056a2fcd8b0a95780ac51019c17b5856657368"
+    },
+    {
+      "path": "results/stage0_audit.md",
+      "bytes": 1307,
+      "sha256": "6d9cc82d9d4a9250ac897eca3522e6faec2bd4c798b092b705244c237d4b985a"
+    },
+    {
+      "path": "results/stage0_env.txt",
+      "bytes": 951,
+      "sha256": "f9a59db2e22bbe1ddb226ac4385b960161306dd8888a3cd3dcbe1775c45a648a"
+    },
+    {
+      "path": "results/stage0_preregistration.json",
+      "bytes": 2517,
+      "sha256": "c93aaed557de9a7aea0b4c827d4658652ef15ee9e0277b5bf1bfc0508dcaeed5"
+    },
+    {
+      "path": "results/stage1_cv.json",
+      "bytes": 177202,
+      "sha256": "06ed10c448cae924e2099ba148a51252ca9e3a96a0507d401d9e5d37f650d519"
+    },
+    {
+      "path": "results/stage1_cv.md",
+      "bytes": 2108,
+      "sha256": "b4eb7e5ced6a6dae4de059ab746b9fff3b8ef7715383ffb34a9606bd303061d9"
+    },
+    {
+      "path": "results/stage1_results.csv",
+      "bytes": 3127,
+      "sha256": "f66dd786add8d41aa4031c6065416a3b9f5e5d2b9ec9d24af987998b8b4ac41d"
+    },
+    {
+      "path": "results/stage2_cv.json",
+      "bytes": 9424,
+      "sha256": "fdc04e58d8b1a54b06785476a2039e41473501f1e1e5f7c4aaf607d0cc043e43"
+    },
+    {
+      "path": "results/stage2_cv.md",
+      "bytes": 2265,
+      "sha256": "f2d4a5988906e6ec22c183548c4647afdc6fd9f9f4824e87b864908cc2e07ca2"
+    },
+    {
+      "path": "results/stage2_folds.json",
+      "bytes": 211877,
+      "sha256": "ebe72f60460233fd6d807376c249ab1ab16f0fb8a3733e9ece4bf09bb339fe95"
+    },
+    {
+      "path": "results/stage2_gate.json",
+      "bytes": 968,
+      "sha256": "3d76d86e987de06fb10a8c9ccddfd04a2e223303fea0ed48d540eec69c50477c"
+    },
+    {
+      "path": "results/stage2_results.csv",
+      "bytes": 2562,
+      "sha256": "a911c0841399c2a139fce4475b36cf0e29ad38351f1bd2aa0dc3e12ac46d5757"
+    },
+    {
+      "path": "results/stage2_results.json",
+      "bytes": 46114,
+      "sha256": "d6f5a56fbec1356cfc609a1354a4f1d530005ed41eccb3922b7be4e8b0a3782e"
+    },
+    {
+      "path": "results/stage3_bootstrap_probs.npz",
+      "bytes": 292823,
+      "sha256": "8329941e6946b0f949c86cfdba1ad7524e80b24453586a7ba66cf8517ccc2b26"
+    },
+    {
+      "path": "results/stage3_meta.json",
+      "bytes": 12908,
+      "sha256": "9b5187f5d767c6e90f244af691853b0e51e44054cb70ede84bd3d3c7109d2852"
+    },
+    {
+      "path": "results/stage3_results.json",
+      "bytes": 4674,
+      "sha256": "7fab3060ed81043e99e188730ee601f736fe299cc8a3f1258d8f11a9c9c309c5"
+    },
+    {
+      "path": "results/traceability.csv",
+      "bytes": 1389,
+      "sha256": "1f198ec2f12825f3603e789be64cab64f207ea869ff1909288b329555a5d5f16"
+    },
+    {
+      "path": "results/traceability.md",
+      "bytes": 1649,
+      "sha256": "e551676522545bcb797e6caf5ad16a752f2445881302c30efc8b0490fd1a69a7"
+    },
+    {
+      "path": "src/__init__.py",
+      "bytes": 212,
+      "sha256": "b741c7b0df1eb76602639543a821d03ca0e0f2ebcafd9df7fe2385bcaf1eb6d6"
+    },
+    {
+      "path": "src/classical.py",
+      "bytes": 25545,
+      "sha256": "9df447333f96edb0b1c4af75ea463e72564b42fb253bdf781533618bfc1a0951"
+    },
+    {
+      "path": "src/data.py",
+      "bytes": 18308,
+      "sha256": "f181ba11e326b61ebdecd12d65f2af5768610e1aed9bb0f29fc46e92209106f9"
+    },
+    {
+      "path": "src/eval.py",
+      "bytes": 6311,
+      "sha256": "5818060a3895c2949abef8590660c9f1dc6b0b1708b8f10e3937c2052dcfa7bc"
+    },
+    {
+      "path": "src/features.py",
+      "bytes": 5161,
+      "sha256": "5a80122c7a72580ca0a731a78a32e3c9c9aaf91e5da67b0224ca63bb1690338f"
+    },
+    {
+      "path": "src/qaoa.py",
+      "bytes": 27317,
+      "sha256": "bb942438dcc39469beb3893f6106f5d0917b80f2c862ace1ac82806eb8f830a4"
+    },
+    {
+      "path": "src/quantum_clf.py",
+      "bytes": 27003,
+      "sha256": "166b1e218aeb567fd7e2464752db6b0a845aa64aea2738629ae2514ee527b170"
+    },
+    {
+      "path": "src/qubo.py",
+      "bytes": 16454,
+      "sha256": "4d1205dd9582924544c2171c88e71dab1115f83c39f14a2648d2360f7b5c14c9"
+    },
+    {
+      "path": "src/report.py",
+      "bytes": 12787,
+      "sha256": "caa39f1f32611d84e6e96184f9a89d9e1941de5ba807385a8500cc5d6d37c2b2"
+    },
+    {
+      "path": "src/stage3.py",
+      "bytes": 23437,
+      "sha256": "3b47e056f97868a2cfd98474179622363aa2cf2e1d9bf40c8de57cd145f3b054"
+    },
+    {
+      "path": "src/utils.py",
+      "bytes": 4842,
+      "sha256": "ab61923f963c817ef8ba96fb63e7a4928c8a5d06d5c0aa4eacdf7f8588ccad87"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 991,
+      "sha256": "467e15d3a2ee94411e0604240bd12c92668a6ba3a7d04fa2cbac544d25cc16db"
+    },
+    {
+      "path": "tests/test_data_contract.py",
+      "bytes": 6496,
+      "sha256": "c16add1edecf7c899de9458151141ec994319916e6528eb989c8e45052808d70"
+    },
+    {
+      "path": "tests/test_key_integrity.py",
+      "bytes": 2890,
+      "sha256": "65b1ed3d04949e354c23662cf2e5d121bcbea5eb0153da8f5f80562205e25953"
+    },
+    {
+      "path": "tests/test_preregistration.py",
+      "bytes": 2399,
+      "sha256": "d76b7c21bcf0c95cbe3162c38a1c8c19cc165618afc2c2401013f10ab2138045"
+    },
+    {
+      "path": "tests/test_stage1_cv.py",
+      "bytes": 5319,
+      "sha256": "232b63661234cc3f6d9d6fa29b92144503e9c7611cc2e4c584836ecf3b6d1a47"
+    },
+    {
+      "path": "tests/test_stage2_quantum.py",
+      "bytes": 6549,
+      "sha256": "2c4059a9e7fa4c7cfd3537f479220f1d4f61e6b71403b1a84c0593fa064f5ce0"
+    },
+    {
+      "path": "tests/test_stage3_final.py",
+      "bytes": 6989,
+      "sha256": "8fd546b798fc1e685e433bbfaf39dd6caa6e49b91328c5a6a2d29ebebc9c1c42"
+    },
+    {
+      "path": "tests/test_stage4_qaoa.py",
+      "bytes": 9519,
+      "sha256": "380f0d844168f4ee3f495f36820d2812ece7b0979858166eeac7d04a1258ddc3"
+    },
+    {
+      "path": "tests/test_stage4_qubo.py",
+      "bytes": 10080,
+      "sha256": "3fd0e32ed70db0a59a8898f30004cb38b69d9df2c6b11192c332eda0b8a579d1"
+    },
+    {
+      "path": "tests/test_stage5_circuit.py",
+      "bytes": 9634,
+      "sha256": "4be5213a4a387e5fbd5ce5a70006664e4b7d49a71db7f5ffeb752f861fd01cc4"
+    },
+    {
+      "path": "tests/test_stage6_report.py",
+      "bytes": 6910,
+      "sha256": "8110d00cc1663145c457d263b504dc918d9ca14dc13e6bd6bd9a908da5dd908c"
+    }
+  ],
+  "excluded": [
+    ".git",
+    ".ipynb_checkpoints",
+    ".pytest_cache",
+    ".venv",
+    "__pycache__",
+    "node_modules",
+    ".DS_Store",
+    "release_manifest.json",
+    "submission.zip"
+  ],
+  "self_reference_note": "release_manifest.json is excluded from the archive: it records this zip's hash."
+}

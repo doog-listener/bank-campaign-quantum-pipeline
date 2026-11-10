@@ -1,0 +1,1689 @@
+{
+  "stage": 4,
+  "prereg_fingerprint": "34ac751dbdd2488c6f08a3b05fc2e0b33a9c1346627732a857b06d32ed835cdc",
+  "seed": 42,
+  "problem": {
+    "k": 6,
+    "budget": 25,
+    "capacity": 22,
+    "penalties": {
+      "A": 40.0,
+      "B": 12.0,
+      "C": 12.0,
+      "K": 6,
+      "budget": 25,
+      "capacity": 22
+    },
+    "layout": {
+      "n_x": 10,
+      "n_qubits": 20,
+      "slack_b_bits": 5,
+      "slack_c_bits": 5,
+      "slack_b_max": 31,
+      "slack_c_max": 31,
+      "qubit_order": [
+        "x0",
+        "x1",
+        "x2",
+        "x3",
+        "x4",
+        "x5",
+        "x6",
+        "x7",
+        "x8",
+        "x9",
+        "sb0",
+        "sb1",
+        "sb2",
+        "sb3",
+        "sb4",
+        "sc0",
+        "sc1",
+        "sc2",
+        "sc3",
+        "sc4"
+      ]
+    },
+    "n_nonzero_couplings": 165
+  },
+  "candidates": [
+    {
+      "customer_id": "C0081",
+      "predicted_probability": 0.718053519095843,
+      "rank": 1,
+      "top10_flag": 1,
+      "contact_cost": 4,
+      "expected_deposit_value": 17,
+      "capacity_units": 1,
+      "customer_segment": "C"
+    },
+    {
+      "customer_id": "C0031",
+      "predicted_probability": 0.7038511759835269,
+      "rank": 2,
+      "top10_flag": 1,
+      "contact_cost": 2,
+      "expected_deposit_value": 13,
+      "capacity_units": 1,
+      "customer_segment": "D"
+    },
+    {
+      "customer_id": "C0079",
+      "predicted_probability": 0.654671248327508,
+      "rank": 3,
+      "top10_flag": 1,
+      "contact_cost": 3,
+      "expected_deposit_value": 24,
+      "capacity_units": 3,
+      "customer_segment": "A"
+    },
+    {
+      "customer_id": "C0170",
+      "predicted_probability": 0.2084637308083143,
+      "rank": 4,
+      "top10_flag": 1,
+      "contact_cost": 1,
+      "expected_deposit_value": 22,
+      "capacity_units": 1,
+      "customer_segment": "C"
+    },
+    {
+      "customer_id": "C0327",
+      "predicted_probability": 0.20397447042204636,
+      "rank": 5,
+      "top10_flag": 1,
+      "contact_cost": 1,
+      "expected_deposit_value": 25,
+      "capacity_units": 4,
+      "customer_segment": "B"
+    },
+    {
+      "customer_id": "C0183",
+      "predicted_probability": 0.20077711769991607,
+      "rank": 6,
+      "top10_flag": 1,
+      "contact_cost": 2,
+      "expected_deposit_value": 14,
+      "capacity_units": 3,
+      "customer_segment": "B"
+    },
+    {
+      "customer_id": "C0182",
+      "predicted_probability": 0.18630505732771427,
+      "rank": 7,
+      "top10_flag": 1,
+      "contact_cost": 1,
+      "expected_deposit_value": 27,
+      "capacity_units": 3,
+      "customer_segment": "B"
+    },
+    {
+      "customer_id": "C0193",
+      "predicted_probability": 0.17843529149864334,
+      "rank": 8,
+      "top10_flag": 1,
+      "contact_cost": 3,
+      "expected_deposit_value": 16,
+      "capacity_units": 1,
+      "customer_segment": "D"
+    },
+    {
+      "customer_id": "C0349",
+      "predicted_probability": 0.1691561114263808,
+      "rank": 9,
+      "top10_flag": 1,
+      "contact_cost": 1,
+      "expected_deposit_value": 17,
+      "capacity_units": 3,
+      "customer_segment": "B"
+    },
+    {
+      "customer_id": "C0359",
+      "predicted_probability": 0.1691561114263808,
+      "rank": 10,
+      "top10_flag": 1,
+      "contact_cost": 1,
+      "expected_deposit_value": 14,
+      "capacity_units": 2,
+      "customer_segment": "D"
+    }
+  ],
+  "brute_force": {
+    "n_combinations": 210,
+    "n_feasible": 210,
+    "optimum": {
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "customer_ids": [
+        "C0081",
+        "C0031",
+        "C0079",
+        "C0170",
+        "C0327",
+        "C0182"
+      ],
+      "bitstring": "1111101000",
+      "cost": 12,
+      "capacity": 13,
+      "expected_net_value": 39.78488545845773,
+      "feasible": true
+    },
+    "runner_up": {
+      "indices": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        8
+      ],
+      "customer_ids": [
+        "C0081",
+        "C0031",
+        "C0079",
+        "C0327",
+        "C0182",
+        "C0349"
+      ],
+      "bitstring": "1110101010",
+      "cost": 12,
+      "capacity": 15,
+      "expected_net_value": 38.07433727492329,
+      "feasible": true
+    },
+    "gap_to_runner_up": 1.710548183534442,
+    "top_5_feasible": [
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "customer_ids": [
+          "C0081",
+          "C0031",
+          "C0079",
+          "C0170",
+          "C0327",
+          "C0182"
+        ],
+        "bitstring": "1111101000",
+        "cost": 12,
+        "capacity": 13,
+        "expected_net_value": 39.78488545845773,
+        "feasible": true
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          6,
+          8
+        ],
+        "customer_ids": [
+          "C0081",
+          "C0031",
+          "C0079",
+          "C0327",
+          "C0182",
+          "C0349"
+        ],
+        "bitstring": "1110101010",
+        "cost": 12,
+        "capacity": 15,
+        "expected_net_value": 38.07433727492329,
+        "feasible": true
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          8
+        ],
+        "customer_ids": [
+          "C0081",
+          "C0031",
+          "C0079",
+          "C0170",
+          "C0327",
+          "C0349"
+        ],
+        "bitstring": "1111100010",
+        "cost": 12,
+        "capacity": 13,
+        "expected_net_value": 37.63030280485792,
+        "feasible": true
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          6,
+          9
+        ],
+        "customer_ids": [
+          "C0081",
+          "C0031",
+          "C0079",
+          "C0327",
+          "C0182",
+          "C0359"
+        ],
+        "bitstring": "1110101001",
+        "cost": 12,
+        "capacity": 14,
+        "expected_net_value": 37.56686894064415,
+        "feasible": true
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          8
+        ],
+        "customer_ids": [
+          "C0081",
+          "C0031",
+          "C0079",
+          "C0170",
+          "C0182",
+          "C0349"
+        ],
+        "bitstring": "1111001010",
+        "cost": 12,
+        "capacity": 12,
+        "expected_net_value": 37.56117759215505,
+        "feasible": true
+      }
+    ],
+    "binding_diagnostics": {
+      "all_subsets_feasible": true,
+      "max_cost_any_subset": 15,
+      "max_capacity_any_subset": 18,
+      "budget_slack_at_optimum": 13,
+      "capacity_slack_at_optimum": 9,
+      "budget_ever_binds": false,
+      "capacity_ever_binds": false,
+      "min_budget_slack_any_subset": 10,
+      "min_capacity_slack_any_subset": 4,
+      "top_k_by_weight": [
+        "C0079",
+        "C0081",
+        "C0031",
+        "C0327",
+        "C0182",
+        "C0170"
+      ],
+      "optimum_equals_top_k_by_weight": true
+    },
+    "n_candidates": 10,
+    "k": 6
+  },
+  "qubo": {
+    "offset": 14748.0,
+    "ground_state_energy": -39.78488545845903,
+    "decoded": {
+      "bitstring": "1111101000",
+      "x_bits": 95,
+      "selected_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "selected_ids": [
+        "C0081",
+        "C0031",
+        "C0079",
+        "C0170",
+        "C0327",
+        "C0182"
+      ],
+      "n_selected": 6,
+      "cost": 12,
+      "capacity": 13,
+      "expected_net_value": 39.78488545845773,
+      "slack_b": 13,
+      "slack_c": 9
+    },
+    "matches_brute_force": true,
+    "penalty_verification": {
+      "ground_state_cardinality_ok": true,
+      "ground_state_within_budget": true,
+      "ground_state_within_capacity": true,
+      "budget_slack_exact": true,
+      "capacity_slack_exact": true
+    }
+  },
+  "qaoa": {
+    "standard_soft_penalty": {
+      "1": {
+        "opt": {
+          "energy": 2008.2690001363944,
+          "params": [
+            2.7379479732260066,
+            0.8411979931006363
+          ],
+          "nfev": 26,
+          "restarts": [
+            {
+              "restart": 0,
+              "energy": 2148.881916468452,
+              "nfev": 30
+            },
+            {
+              "restart": 1,
+              "energy": 2008.2690001363944,
+              "nfev": 26
+            }
+          ],
+          "p": 1
+        },
+        "summary": {
+          "optimal_bitstring": "1111101000",
+          "optimal_expected_net_value": 39.78488545845774,
+          "p_optimal": 0.00014056746265236512,
+          "approximation_ratio": 0.5487470110002652,
+          "mean_expected_net_value": 21.831836978316602,
+          "feasibility_rate": 0.2172225308611882,
+          "expected_value_over_feasible_only": 26.863785449092184,
+          "shots": 8192,
+          "sampled_optimal_counts": 0,
+          "sampled_feasible_fraction": 0.2174072265625,
+          "top_bitstrings": [
+            {
+              "bitstring": "0000101010",
+              "probability": 0.0029648270836757275,
+              "selected_ids": [
+                "C0327",
+                "C0182",
+                "C0349"
+              ],
+              "feasible": false,
+              "expected_net_value": 10.005252202647917
+            },
+            {
+              "bitstring": "1111001010",
+              "probability": 0.0029449695047462495,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0182",
+                "C0349"
+              ],
+              "feasible": true,
+              "expected_net_value": 37.56117759215505
+            },
+            {
+              "bitstring": "0001001010",
+              "probability": 0.0028606594367287536,
+              "selected_ids": [
+                "C0170",
+                "C0182",
+                "C0349"
+              ],
+              "feasible": false,
+              "expected_net_value": 9.492092519879673
+            },
+            {
+              "bitstring": "1110101010",
+              "probability": 0.002852447006470217,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0327",
+                "C0182",
+                "C0349"
+              ],
+              "feasible": true,
+              "expected_net_value": 38.074337274923295
+            },
+            {
+              "bitstring": "1111010110",
+              "probability": 0.002849281538033298,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0183",
+                "C0193",
+                "C0349"
+              ],
+              "feasible": false,
+              "expected_net_value": 34.19678535608388
+            }
+          ],
+          "brute_force_optimum_value": 39.78488545845773
+        },
+        "circuit": {
+          "name": "qaoa_soft_p1",
+          "qubits": 20,
+          "logical_depth": 35,
+          "transpiled_depth": 104,
+          "logical_gates": {
+            "h": 20,
+            "rz": 15,
+            "rzz": 165,
+            "rx": 20
+          },
+          "transpiled_gates": {
+            "rz": 265,
+            "sx": 60,
+            "cx": 330
+          },
+          "swaps": 0,
+          "stripped_gate": null
+        },
+        "qiskit_cross_check": {
+          "max_abs_probability_difference": 2.5701012498768883e-16,
+          "total_variation_distance": 9.827751576032774e-13
+        }
+      },
+      "2": {
+        "opt": {
+          "energy": 1459.8973798352697,
+          "params": [
+            0.09821418934523078,
+            0.6541063241040196,
+            0.5955661405437332,
+            0.43464949460500224
+          ],
+          "nfev": 52,
+          "restarts": [
+            {
+              "restart": 0,
+              "energy": 2267.7657960438373,
+              "nfev": 42
+            },
+            {
+              "restart": 1,
+              "energy": 1459.8973798352697,
+              "nfev": 52
+            }
+          ],
+          "p": 2
+        },
+        "summary": {
+          "optimal_bitstring": "1111101000",
+          "optimal_expected_net_value": 39.78488545845774,
+          "p_optimal": 0.0001809493013541163,
+          "approximation_ratio": 0.5403634787131356,
+          "mean_expected_net_value": 21.498299106535868,
+          "feasibility_rate": 0.1962090647668973,
+          "expected_value_over_feasible_only": 27.225931861540474,
+          "shots": 8192,
+          "sampled_optimal_counts": 2,
+          "sampled_feasible_fraction": 0.1951904296875,
+          "top_bitstrings": [
+            {
+              "bitstring": "0000111100",
+              "probability": 0.0023347682890864406,
+              "selected_ids": [
+                "C0327",
+                "C0183",
+                "C0182",
+                "C0193"
+              ],
+              "feasible": false,
+              "expected_net_value": 8.795442620176562
+            },
+            {
+              "bitstring": "0111011100",
+              "probability": 0.002306867965417859,
+              "selected_ids": [
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0183",
+                "C0182",
+                "C0193"
+              ],
+              "feasible": true,
+              "expected_net_value": 28.14445818505436
+            },
+            {
+              "bitstring": "1000111100",
+              "probability": 0.0022473435921123285,
+              "selected_ids": [
+                "C0081",
+                "C0327",
+                "C0183",
+                "C0182",
+                "C0193"
+              ],
+              "feasible": false,
+              "expected_net_value": 17.002352444805894
+            },
+            {
+              "bitstring": "1101011100",
+              "probability": 0.002241388148363754,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0170",
+                "C0183",
+                "C0182",
+                "C0193"
+              ],
+              "feasible": true,
+              "expected_net_value": 23.6392580498235
+            },
+            {
+              "bitstring": "0000110010",
+              "probability": 0.002219737733700421,
+              "selected_ids": [
+                "C0327",
+                "C0183",
+                "C0349"
+              ],
+              "feasible": false,
+              "expected_net_value": 6.785895302598457
+            }
+          ],
+          "brute_force_optimum_value": 39.78488545845773
+        },
+        "circuit": {
+          "name": "qaoa_soft_p2",
+          "qubits": 20,
+          "logical_depth": 57,
+          "transpiled_depth": 169,
+          "logical_gates": {
+            "h": 20,
+            "rz": 30,
+            "rzz": 330,
+            "rx": 40
+          },
+          "transpiled_gates": {
+            "rz": 490,
+            "sx": 100,
+            "cx": 660
+          },
+          "swaps": 0,
+          "stripped_gate": null
+        }
+      },
+      "3": {
+        "opt": {
+          "energy": 1640.3113513237054,
+          "params": [
+            2.0948549877458,
+            0.5419608015766391,
+            1.664560120268657,
+            1.3443784061810709,
+            1.7069927036066463,
+            0.06840287886532977
+          ],
+          "nfev": 53,
+          "restarts": [
+            {
+              "restart": 0,
+              "energy": 2111.3406297186816,
+              "nfev": 50
+            },
+            {
+              "restart": 1,
+              "energy": 1640.3113513237054,
+              "nfev": 53
+            }
+          ],
+          "p": 3
+        },
+        "summary": {
+          "optimal_bitstring": "1111101000",
+          "optimal_expected_net_value": 39.78488545845774,
+          "p_optimal": 0.000215106211829006,
+          "approximation_ratio": 0.5417687631923609,
+          "mean_expected_net_value": 21.554208188578393,
+          "feasibility_rate": 0.1985737721836569,
+          "expected_value_over_feasible_only": 26.99931576367832,
+          "shots": 8192,
+          "sampled_optimal_counts": 3,
+          "sampled_feasible_fraction": 0.1995849609375,
+          "top_bitstrings": [
+            {
+              "bitstring": "1100100001",
+              "probability": 0.0030566616417118937,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0327",
+                "C0359"
+              ],
+              "feasible": false,
+              "expected_net_value": 20.82452243293567
+            },
+            {
+              "bitstring": "0011000001",
+              "probability": 0.0030541184477197413,
+              "selected_ids": [
+                "C0079",
+                "C0170",
+                "C0359"
+              ],
+              "feasible": false,
+              "expected_net_value": 17.666497597612437
+            },
+            {
+              "bitstring": "1000100001",
+              "probability": 0.002715854924548131,
+              "selected_ids": [
+                "C0081",
+                "C0327",
+                "C0359"
+              ],
+              "feasible": false,
+              "expected_net_value": 13.67445714514982
+            },
+            {
+              "bitstring": "0111000001",
+              "probability": 0.002677325460802558,
+              "selected_ids": [
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0359"
+              ],
+              "feasible": false,
+              "expected_net_value": 24.816562885398287
+            },
+            {
+              "bitstring": "0011010010",
+              "probability": 0.0026605093724447392,
+              "selected_ids": [
+                "C0079",
+                "C0170",
+                "C0183",
+                "C0349"
+              ],
+              "feasible": false,
+              "expected_net_value": 18.984845579690404
+            }
+          ],
+          "brute_force_optimum_value": 39.78488545845773
+        },
+        "circuit": {
+          "name": "qaoa_soft_p3",
+          "qubits": 20,
+          "logical_depth": 79,
+          "transpiled_depth": 234,
+          "logical_gates": {
+            "h": 20,
+            "rz": 45,
+            "rzz": 495,
+            "rx": 60
+          },
+          "transpiled_gates": {
+            "rz": 715,
+            "sx": 140,
+            "cx": 990
+          },
+          "swaps": 0,
+          "stripped_gate": null
+        }
+      },
+      "4": {
+        "opt": {
+          "energy": 2137.897914495561,
+          "params": [
+            0.2734873156296633,
+            1.2449252824220123,
+            2.978106425700085,
+            0.5886847958460012,
+            1.5609567730934555,
+            0.8772226312674377,
+            1.3699342942074515,
+            0.23427079947325447
+          ],
+          "nfev": 63,
+          "restarts": [
+            {
+              "restart": 0,
+              "energy": 2542.761977750911,
+              "nfev": 84
+            },
+            {
+              "restart": 1,
+              "energy": 2137.897914495561,
+              "nfev": 63
+            }
+          ],
+          "p": 4
+        },
+        "summary": {
+          "optimal_bitstring": "1111101000",
+          "optimal_expected_net_value": 39.78488545845774,
+          "p_optimal": 7.31395609196787e-05,
+          "approximation_ratio": 0.5484241146376937,
+          "mean_expected_net_value": 21.81899058351674,
+          "feasibility_rate": 0.23356573462858365,
+          "expected_value_over_feasible_only": 26.842177080981784,
+          "shots": 8192,
+          "sampled_optimal_counts": 1,
+          "sampled_feasible_fraction": 0.232421875,
+          "top_bitstrings": [
+            {
+              "bitstring": "1011010110",
+              "probability": 0.010398558206591309,
+              "selected_ids": [
+                "C0081",
+                "C0079",
+                "C0170",
+                "C0183",
+                "C0193",
+                "C0349"
+              ],
+              "feasible": true,
+              "expected_net_value": 27.04672006829803
+            },
+            {
+              "bitstring": "0100110110",
+              "probability": 0.009916773357332005,
+              "selected_ids": [
+                "C0031",
+                "C0327",
+                "C0183",
+                "C0193",
+                "C0349"
+              ],
+              "feasible": false,
+              "expected_net_value": 13.790925254362602
+            },
+            {
+              "bitstring": "1110010110",
+              "probability": 0.009581150580627144,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0183",
+                "C0193",
+                "C0349"
+              ],
+              "feasible": true,
+              "expected_net_value": 30.610583278300965
+            },
+            {
+              "bitstring": "0001110110",
+              "probability": 0.009451034196600911,
+              "selected_ids": [
+                "C0170",
+                "C0327",
+                "C0183",
+                "C0193",
+                "C0349"
+              ],
+              "feasible": false,
+              "expected_net_value": 10.227062044359666
+            },
+            {
+              "bitstring": "1011001001",
+              "probability": 0.009345112207682254,
+              "selected_ids": [
+                "C0081",
+                "C0079",
+                "C0170",
+                "C0182",
+                "C0359"
+              ],
+              "feasible": false,
+              "expected_net_value": 29.903643970090055
+            }
+          ],
+          "brute_force_optimum_value": 39.78488545845773
+        },
+        "circuit": {
+          "name": "qaoa_soft_p4",
+          "qubits": 20,
+          "logical_depth": 101,
+          "transpiled_depth": 299,
+          "logical_gates": {
+            "h": 20,
+            "rz": 60,
+            "rzz": 660,
+            "rx": 80
+          },
+          "transpiled_gates": {
+            "rz": 940,
+            "sx": 180,
+            "cx": 1320
+          },
+          "swaps": 0,
+          "stripped_gate": null
+        }
+      },
+      "5": {
+        "opt": {
+          "energy": 2554.0105221034955,
+          "params": [
+            1.4075859198942124,
+            1.9342948854337914,
+            0.8357188611009945,
+            1.4652526163855304,
+            0.7928238944852098,
+            1.213379541034671,
+            1.511764544489784,
+            0.25469784274519314,
+            2.028401093108492,
+            1.0247864423144517
+          ],
+          "nfev": 102,
+          "restarts": [
+            {
+              "restart": 0,
+              "energy": 2694.235525688755,
+              "nfev": 103
+            },
+            {
+              "restart": 1,
+              "energy": 2554.0105221034955,
+              "nfev": 102
+            }
+          ],
+          "p": 5
+        },
+        "summary": {
+          "optimal_bitstring": "1111101000",
+          "optimal_expected_net_value": 39.78488545845774,
+          "p_optimal": 0.0009751056856262675,
+          "approximation_ratio": 0.5461489903451027,
+          "mean_expected_net_value": 21.72847502413225,
+          "feasibility_rate": 0.2000843397248662,
+          "expected_value_over_feasible_only": 26.464200447926352,
+          "shots": 8192,
+          "sampled_optimal_counts": 7,
+          "sampled_feasible_fraction": 0.1981201171875,
+          "top_bitstrings": [
+            {
+              "bitstring": "0101011100",
+              "probability": 0.0012725335461611,
+              "selected_ids": [
+                "C0031",
+                "C0170",
+                "C0183",
+                "C0182",
+                "C0193"
+              ],
+              "feasible": false,
+              "expected_net_value": 15.432348225194168
+            },
+            {
+              "bitstring": "0111011100",
+              "probability": 0.00125003201916186,
+              "selected_ids": [
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0183",
+                "C0182",
+                "C0193"
+              ],
+              "feasible": true,
+              "expected_net_value": 28.14445818505436
+            },
+            {
+              "bitstring": "0011011100",
+              "probability": 0.0012463972650723506,
+              "selected_ids": [
+                "C0079",
+                "C0170",
+                "C0183",
+                "C0182",
+                "C0193"
+              ],
+              "feasible": false,
+              "expected_net_value": 20.99439289726851
+            },
+            {
+              "bitstring": "1010111100",
+              "probability": 0.0012340912895051044,
+              "selected_ids": [
+                "C0081",
+                "C0079",
+                "C0327",
+                "C0183",
+                "C0182",
+                "C0193"
+              ],
+              "feasible": true,
+              "expected_net_value": 29.714462404666087
+            },
+            {
+              "bitstring": "1111001100",
+              "probability": 0.00122817529437324,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0182",
+                "C0193"
+              ],
+              "feasible": true,
+              "expected_net_value": 35.54048836188487
+            }
+          ],
+          "brute_force_optimum_value": 39.78488545845773
+        },
+        "circuit": {
+          "name": "qaoa_soft_p5",
+          "qubits": 20,
+          "logical_depth": 123,
+          "transpiled_depth": 364,
+          "logical_gates": {
+            "h": 20,
+            "rz": 75,
+            "rzz": 825,
+            "rx": 100
+          },
+          "transpiled_gates": {
+            "rz": 1165,
+            "sx": 220,
+            "cx": 1650
+          },
+          "swaps": 0,
+          "stripped_gate": null
+        }
+      }
+    },
+    "dicke_xy": {
+      "1": {
+        "opt": {
+          "energy": -28.985022335491504,
+          "params": [
+            3.2779397928899323,
+            0.2818167023579322
+          ],
+          "nfev": 42,
+          "restarts": [
+            {
+              "restart": 0,
+              "energy": -28.985022335491504,
+              "nfev": 42
+            },
+            {
+              "restart": 1,
+              "energy": -28.489387627021067,
+              "nfev": 30
+            }
+          ],
+          "p": 1
+        },
+        "summary": {
+          "optimal_bitstring": "1111101000",
+          "optimal_expected_net_value": 39.78488545845774,
+          "p_optimal": 0.00441278980087129,
+          "approximation_ratio": 0.7285435662685732,
+          "mean_expected_net_value": 28.985022335491497,
+          "feasibility_rate": 0.9999999999999996,
+          "expected_value_over_feasible_only": 28.985022335491514,
+          "shots": 8192,
+          "sampled_optimal_counts": 47,
+          "sampled_feasible_fraction": 1.0,
+          "top_bitstrings": [
+            {
+              "bitstring": "1011100101",
+              "probability": 0.0731701829340524,
+              "selected_ids": [
+                "C0081",
+                "C0079",
+                "C0170",
+                "C0327",
+                "C0193",
+                "C0359"
+              ],
+              "feasible": true,
+              "expected_net_value": 29.82773384677122
+            },
+            {
+              "bitstring": "0111100101",
+              "probability": 0.04513572862119723,
+              "selected_ids": [
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0327",
+                "C0193",
+                "C0359"
+              ],
+              "feasible": true,
+              "expected_net_value": 28.77088930992774
+            },
+            {
+              "bitstring": "1111000101",
+              "probability": 0.043382537793205916,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0193",
+                "C0359"
+              ],
+              "feasible": true,
+              "expected_net_value": 32.87843737400591
+            },
+            {
+              "bitstring": "1011101100",
+              "probability": 0.035151942309310395,
+              "selected_ids": [
+                "C0081",
+                "C0079",
+                "C0170",
+                "C0327",
+                "C0182",
+                "C0193"
+              ],
+              "feasible": true,
+              "expected_net_value": 32.48978483465018
+            },
+            {
+              "bitstring": "1011000111",
+              "probability": 0.03087539078815904,
+              "selected_ids": [
+                "C0081",
+                "C0079",
+                "C0170",
+                "C0193",
+                "C0349",
+                "C0359"
+              ],
+              "feasible": true,
+              "expected_net_value": 27.604025980468535
+            }
+          ],
+          "brute_force_optimum_value": 39.78488545845773
+        },
+        "circuit": {
+          "name": "dicke_xy_p1",
+          "qubits": 10,
+          "logical_depth": 21,
+          "transpiled_depth": 111,
+          "logical_gates": {
+            "rz": 10,
+            "rxx": 10,
+            "ryy": 10
+          },
+          "transpiled_gates": {
+            "rz": 80,
+            "sx": 50,
+            "cx": 40
+          },
+          "swaps": 0,
+          "stripped_gate": "initialize"
+        },
+        "support_within_constraint": true,
+        "qiskit_cross_check": {
+          "max_abs_probability_difference": 4.510281037539698e-16,
+          "total_variation_distance": 3.0880481328375e-15
+        }
+      },
+      "2": {
+        "opt": {
+          "energy": -30.45374751942232,
+          "params": [
+            1.9558171852922202,
+            2.660318600485759,
+            0.3934439776109173,
+            0.5590625617993166
+          ],
+          "nfev": 97,
+          "restarts": [
+            {
+              "restart": 0,
+              "energy": -30.45374751942232,
+              "nfev": 97
+            },
+            {
+              "restart": 1,
+              "energy": -30.264609383831726,
+              "nfev": 125
+            }
+          ],
+          "p": 2
+        },
+        "summary": {
+          "optimal_bitstring": "1111101000",
+          "optimal_expected_net_value": 39.78488545845774,
+          "p_optimal": 0.003987181334563732,
+          "approximation_ratio": 0.7654602286393729,
+          "mean_expected_net_value": 30.453747519422322,
+          "feasibility_rate": 0.9999999999999996,
+          "expected_value_over_feasible_only": 30.453747519422336,
+          "shots": 8192,
+          "sampled_optimal_counts": 43,
+          "sampled_feasible_fraction": 1.0,
+          "top_bitstrings": [
+            {
+              "bitstring": "1110100110",
+              "probability": 0.041617486158829514,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0327",
+                "C0193",
+                "C0349"
+              ],
+              "feasible": true,
+              "expected_net_value": 33.8990653910533
+            },
+            {
+              "bitstring": "1110100101",
+              "probability": 0.035949075700142316,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0327",
+                "C0193",
+                "C0359"
+              ],
+              "feasible": true,
+              "expected_net_value": 33.39159705677416
+            },
+            {
+              "bitstring": "1111000110",
+              "probability": 0.0309047769178189,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0193",
+                "C0349"
+              ],
+              "feasible": true,
+              "expected_net_value": 33.38590570828506
+            },
+            {
+              "bitstring": "1111001001",
+              "probability": 0.028548414463560913,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0182",
+                "C0359"
+              ],
+              "feasible": true,
+              "expected_net_value": 37.05370925787591
+            },
+            {
+              "bitstring": "1110110001",
+              "probability": 0.028329265954154116,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0327",
+                "C0183",
+                "C0359"
+              ],
+              "feasible": true,
+              "expected_net_value": 34.347512040594694
+            }
+          ],
+          "brute_force_optimum_value": 39.78488545845773
+        },
+        "circuit": {
+          "name": "dicke_xy_p2",
+          "qubits": 10,
+          "logical_depth": 42,
+          "transpiled_depth": 222,
+          "logical_gates": {
+            "rz": 20,
+            "rxx": 20,
+            "ryy": 20
+          },
+          "transpiled_gates": {
+            "rz": 160,
+            "sx": 100,
+            "cx": 80
+          },
+          "swaps": 0,
+          "stripped_gate": "initialize"
+        },
+        "support_within_constraint": true
+      },
+      "3": {
+        "opt": {
+          "energy": -32.336986620385325,
+          "params": [
+            2.6269294012358646,
+            1.664344322859213,
+            2.8553808734039183,
+            -0.037796070416730526,
+            0.2555018160843744,
+            0.7871271086882874
+          ],
+          "nfev": 200,
+          "restarts": [
+            {
+              "restart": 0,
+              "energy": -30.434718001571607,
+              "nfev": 200
+            },
+            {
+              "restart": 1,
+              "energy": -32.336986620385325,
+              "nfev": 200
+            }
+          ],
+          "p": 3
+        },
+        "summary": {
+          "optimal_bitstring": "1111101000",
+          "optimal_expected_net_value": 39.78488545845774,
+          "p_optimal": 0.017510947114277968,
+          "approximation_ratio": 0.8127957702467361,
+          "mean_expected_net_value": 32.336986620385325,
+          "feasibility_rate": 1.0000000000000002,
+          "expected_value_over_feasible_only": 32.33698662038532,
+          "shots": 8192,
+          "sampled_optimal_counts": 133,
+          "sampled_feasible_fraction": 1.0,
+          "top_bitstrings": [
+            {
+              "bitstring": "1010111010",
+              "probability": 0.12960549850512004,
+              "selected_ids": [
+                "C0081",
+                "C0079",
+                "C0327",
+                "C0183",
+                "C0182",
+                "C0349"
+              ],
+              "feasible": true,
+              "expected_net_value": 31.735151634936265
+            },
+            {
+              "bitstring": "1110111000",
+              "probability": 0.0842260698729925,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0327",
+                "C0183",
+                "C0182"
+              ],
+              "feasible": true,
+              "expected_net_value": 37.00956302847364
+            },
+            {
+              "bitstring": "1011111000",
+              "probability": 0.0653749536172701,
+              "selected_ids": [
+                "C0081",
+                "C0079",
+                "C0170",
+                "C0327",
+                "C0183",
+                "C0182"
+              ],
+              "feasible": true,
+              "expected_net_value": 33.44569981847071
+            },
+            {
+              "bitstring": "1110110010",
+              "probability": 0.05042579938507738,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0327",
+                "C0183",
+                "C0349"
+              ],
+              "feasible": true,
+              "expected_net_value": 34.85498037487383
+            },
+            {
+              "bitstring": "1110101010",
+              "probability": 0.04841968390057449,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0327",
+                "C0182",
+                "C0349"
+              ],
+              "feasible": true,
+              "expected_net_value": 38.074337274923295
+            }
+          ],
+          "brute_force_optimum_value": 39.78488545845773
+        },
+        "circuit": {
+          "name": "dicke_xy_p3",
+          "qubits": 10,
+          "logical_depth": 63,
+          "transpiled_depth": 333,
+          "logical_gates": {
+            "rz": 30,
+            "rxx": 30,
+            "ryy": 30
+          },
+          "transpiled_gates": {
+            "rz": 240,
+            "sx": 150,
+            "cx": 120
+          },
+          "swaps": 0,
+          "stripped_gate": "initialize"
+        },
+        "support_within_constraint": true
+      },
+      "4": {
+        "opt": {
+          "energy": -33.093181408171226,
+          "params": [
+            1.265923108882668,
+            0.4939426876560111,
+            2.84388240874965,
+            0.848593630540836,
+            1.2050501180429052,
+            1.2535716172595528,
+            0.49594363773192834,
+            1.3308242962386312
+          ],
+          "nfev": 200,
+          "restarts": [
+            {
+              "restart": 0,
+              "energy": -31.779268399840724,
+              "nfev": 200
+            },
+            {
+              "restart": 1,
+              "energy": -33.093181408171226,
+              "nfev": 200
+            }
+          ],
+          "p": 4
+        },
+        "summary": {
+          "optimal_bitstring": "1111101000",
+          "optimal_expected_net_value": 39.78488545845774,
+          "p_optimal": 0.07585308603983063,
+          "approximation_ratio": 0.8318028574626964,
+          "mean_expected_net_value": 33.093181408171226,
+          "feasibility_rate": 1.0000000000000002,
+          "expected_value_over_feasible_only": 33.09318140817122,
+          "shots": 8192,
+          "sampled_optimal_counts": 601,
+          "sampled_feasible_fraction": 1.0,
+          "top_bitstrings": [
+            {
+              "bitstring": "1111101000",
+              "probability": 0.07585308603983063,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0327",
+                "C0182"
+              ],
+              "feasible": true,
+              "expected_net_value": 39.78488545845774
+            },
+            {
+              "bitstring": "1110100011",
+              "probability": 0.07404766661407375,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0327",
+                "C0349",
+                "C0359"
+              ],
+              "feasible": true,
+              "expected_net_value": 35.41228628704434
+            },
+            {
+              "bitstring": "1110101001",
+              "probability": 0.07308682572517758,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0327",
+                "C0182",
+                "C0359"
+              ],
+              "feasible": true,
+              "expected_net_value": 37.566868940644156
+            },
+            {
+              "bitstring": "1111100010",
+              "probability": 0.07045597216880682,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0327",
+                "C0349"
+              ],
+              "feasible": true,
+              "expected_net_value": 37.63030280485792
+            },
+            {
+              "bitstring": "1110101010",
+              "probability": 0.04560139227372257,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0327",
+                "C0182",
+                "C0349"
+              ],
+              "feasible": true,
+              "expected_net_value": 38.074337274923295
+            }
+          ],
+          "brute_force_optimum_value": 39.78488545845773
+        },
+        "circuit": {
+          "name": "dicke_xy_p4",
+          "qubits": 10,
+          "logical_depth": 84,
+          "transpiled_depth": 444,
+          "logical_gates": {
+            "rz": 40,
+            "rxx": 40,
+            "ryy": 40
+          },
+          "transpiled_gates": {
+            "rz": 320,
+            "sx": 200,
+            "cx": 160
+          },
+          "swaps": 0,
+          "stripped_gate": "initialize"
+        },
+        "support_within_constraint": true
+      },
+      "5": {
+        "opt": {
+          "energy": -32.48811307988691,
+          "params": [
+            3.2888228324417423,
+            3.2555632158430865,
+            1.1514168148516604,
+            0.814134611082554,
+            2.9148959931573986,
+            1.7813927603252429,
+            0.7854758385117168,
+            0.35044500423179215,
+            0.865638360416925,
+            0.9663408964918763
+          ],
+          "nfev": 200,
+          "restarts": [
+            {
+              "restart": 0,
+              "energy": -32.48811307988691,
+              "nfev": 200
+            },
+            {
+              "restart": 1,
+              "energy": -31.596540390355322,
+              "nfev": 200
+            }
+          ],
+          "p": 5
+        },
+        "summary": {
+          "optimal_bitstring": "1111101000",
+          "optimal_expected_net_value": 39.78488545845774,
+          "p_optimal": 0.10114562465791034,
+          "approximation_ratio": 0.8165943600317785,
+          "mean_expected_net_value": 32.48811307988691,
+          "feasibility_rate": 0.999999999999999,
+          "expected_value_over_feasible_only": 32.488113079886936,
+          "shots": 8192,
+          "sampled_optimal_counts": 838,
+          "sampled_feasible_fraction": 1.0,
+          "top_bitstrings": [
+            {
+              "bitstring": "1111101000",
+              "probability": 0.10114562465791034,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0327",
+                "C0182"
+              ],
+              "feasible": true,
+              "expected_net_value": 39.78488545845774
+            },
+            {
+              "bitstring": "1111110000",
+              "probability": 0.053903152769126016,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0327",
+                "C0183"
+              ],
+              "feasible": true,
+              "expected_net_value": 36.565528558408275
+            },
+            {
+              "bitstring": "1111000011",
+              "probability": 0.04424496767344293,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0349",
+                "C0359"
+              ],
+              "feasible": true,
+              "expected_net_value": 34.89912660427609
+            },
+            {
+              "bitstring": "0111111000",
+              "probability": 0.04063875528615288,
+              "selected_ids": [
+                "C0031",
+                "C0079",
+                "C0170",
+                "C0327",
+                "C0183",
+                "C0182"
+              ],
+              "feasible": true,
+              "expected_net_value": 32.38885528162723
+            },
+            {
+              "bitstring": "1110001011",
+              "probability": 0.0397883806192933,
+              "selected_ids": [
+                "C0081",
+                "C0031",
+                "C0079",
+                "C0182",
+                "C0349",
+                "C0359"
+              ],
+              "feasible": true,
+              "expected_net_value": 35.34316107434147
+            }
+          ],
+          "brute_force_optimum_value": 39.78488545845773
+        },
+        "circuit": {
+          "name": "dicke_xy_p5",
+          "qubits": 10,
+          "logical_depth": 105,
+          "transpiled_depth": 555,
+          "logical_gates": {
+            "rz": 50,
+            "rxx": 50,
+            "ryy": 50
+          },
+          "transpiled_gates": {
+            "rz": 400,
+            "sx": 250,
+            "cx": 200
+          },
+          "swaps": 0,
+          "stripped_gate": "initialize"
+        },
+        "support_within_constraint": true
+      }
+    },
+    "dicke_preparation_note": "The uniform Dicke(6,10) start state is prepared with an arbitrary state-preparation primitive (QuantumCircuit.initialize on the 210 support states in Qiskit, exact vector in the numpy engine). Its cost is reported separately and is NOT part of the p-scaling depth; a hardware-realizable replacement is the linear-depth Dicke preparation of Bartschi & Eidenbenz (2022), which this project does not implement."
+  },
+  "robustness": {
+    "resamples": 200,
+    "infeasible_resamples": 0,
+    "same_optimum_fraction": 0.005,
+    "candidate_set_overlap_mean": 0.5841666666666667,
+    "candidate_set_identical_fraction": 0.025,
+    "regret_mean": 10.112469327459111,
+    "regret_p95": 32.80176626238972,
+    "resample_optimum_value_mean": 38.38004034940153,
+    "resample_optimum_value_p05": 18.568849050998686,
+    "resample_optimum_value_p95": 57.04075808674097,
+    "pool_alignment_correlation": 0.9630705007154556
+  }
+}
