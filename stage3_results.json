@@ -1,0 +1,193 @@
+{
+  "stage": 5,
+  "seed": 42,
+  "selected_customers": [
+    "C0081",
+    "C0031",
+    "C0079",
+    "C0170",
+    "C0327",
+    "C0182"
+  ],
+  "probabilities": [
+    0.718053519095843,
+    0.7038511759835269,
+    0.654671248327508,
+    0.2084637308083143,
+    0.20397447042204636,
+    0.18630505732771427
+  ],
+  "expected_net_value": 39.78488545845774,
+  "success_threshold": 3,
+  "answer": {
+    "p_at_least_threshold_exact": 0.5676553417084981
+  },
+  "circuit": {
+    "logical_qubits": 6,
+    "physical_qubits": 6,
+    "logical_depth": 1,
+    "transpiled_depth": 4,
+    "logical_gates": {
+      "ry": 6
+    },
+    "transpiled_gates": {
+      "rz": 12,
+      "sx": 12
+    },
+    "transpiled_one_qubit_gates": 24,
+    "transpiled_two_qubit_gates": 0,
+    "swaps": 0
+  },
+  "backends": {
+    "threshold": 3,
+    "n_qubits": 6,
+    "ry_angles": [
+      2.022064423622433,
+      1.9907326963373222,
+      1.8852978645441887,
+      0.9482907883439324,
+      0.9371948053661054,
+      0.8925995242750664
+    ],
+    "exact": {
+      "pmf": [
+        0.014783213946190366,
+        0.1118766026231183,
+        0.30568484172219323,
+        0.35893514607629556,
+        0.1709546505711601,
+        0.03514439498233354,
+        0.002621150078708857
+      ],
+      "p_at_least_threshold": 0.5676553417084981,
+      "threshold": 3,
+      "n": 6,
+      "expected_successes": 2.6753192019649528
+    },
+    "ideal_statevector": {
+      "p_at_least_threshold": 0.5676553417084983,
+      "pmf": [
+        0.014783213946190359,
+        0.1118766026231183,
+        0.3056848417221933,
+        0.3589351460762957,
+        0.17095465057116024,
+        0.03514439498233355,
+        0.0026211500787088576
+      ],
+      "marginals": [
+        0.7180535190958433,
+        0.7038511759835271,
+        0.6546712483275082,
+        0.20846373080831426,
+        0.20397447042204636,
+        0.1863050573277143
+      ]
+    },
+    "statevector_matches_exact": true,
+    "monte_carlo": {
+      "samples": 1000000,
+      "p_hat": 0.567775,
+      "abs_error": 0.00011965829150195617
+    },
+    "finite_shots": [
+      {
+        "shots": 1000,
+        "successes": 553,
+        "p_hat": 0.553,
+        "ci95_wilson": [
+          0.5220403713020199,
+          0.5835539922985113
+        ],
+        "distinct_bitstrings": 59,
+        "top_bitstring": "000111",
+        "top_bitstring_count": 164
+      },
+      {
+        "shots": 8000,
+        "successes": 4647,
+        "p_hat": 0.580875,
+        "ci95_wilson": [
+          0.5700264555911025,
+          0.5916459121909876
+        ],
+        "distinct_bitstrings": 64,
+        "top_bitstring": "000111",
+        "top_bitstring_count": 1437
+      },
+      {
+        "shots": 100000,
+        "successes": 56706,
+        "p_hat": 0.56706,
+        "ci95_wilson": [
+          0.56398650569484,
+          0.5701283423385003
+        ],
+        "distinct_bitstrings": 64,
+        "top_bitstring": "000111",
+        "top_bitstring_count": 16997
+      }
+    ],
+    "noisy": {
+      "model": {
+        "depol_1q": 0.001,
+        "readout_p0_given_1": 0.02,
+        "readout_p1_given_0": 0.01
+      },
+      "repeats": 20,
+      "example": {
+        "shots": 8000,
+        "p_hat_unmitigated": 0.558875,
+        "p_hat_mitigated": 0.5710345967944938,
+        "nnls_residual": 0.00010795619827257122,
+        "readout_matrix_diagonal_mean": 0.9093554687500001
+      },
+      "p_hat_mean": 0.55701875,
+      "p_hat_sd": 0.0048734435774544175,
+      "bias": -0.010636591708498067
+    },
+    "mitigated": {
+      "repeats": 20,
+      "p_hat_mean": 0.5664415059081934,
+      "p_hat_sd": 0.005867209500605118,
+      "bias": -0.0012138358003046523,
+      "abs_error_vs_unmitigated": -0.009422755908193414
+    },
+    "shot_noise_sd_at_8192": 0.0054734662112336015
+  },
+  "sensitivity": {
+    "dp_dp_i": [
+      0.4137141804746022,
+      0.4163261819599737,
+      0.424874516266528,
+      0.3502628352577432,
+      0.34922009962310985,
+      0.3451469915357024
+    ],
+    "sum_dp_dp_i": 2.2995448051176592
+  },
+  "propagation": {
+    "resamples": 1000,
+    "frozen": {
+      "mean": 0.34860938246976436,
+      "sd": 0.21802078887195336,
+      "ci95_percentile": [
+        0.026612911018942812,
+        0.7479355681022813
+      ],
+      "point_estimate": 0.5676553417084981
+    },
+    "resolved": {
+      "resamples_used": 1000,
+      "mean": 0.5046422291905647,
+      "sd": 0.20245134674903112,
+      "ci95_percentile": [
+        0.1470824814794137,
+        0.8532394040172928
+      ],
+      "same_selection_frequency": 0.004
+    },
+    "ratio_sd_to_shot_noise_8192": 39.83230743701187
+  },
+  "reduces_to": "product state: 6 Ry gates, 0 two-qubit gates, 0 measurements-basis change"
+}
